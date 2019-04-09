@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>WebVR Musical Instrument</title>
+  <!-- A-Frame CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js" charset="utf-8"></script> -->
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <!-- Tone.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.10.0/Tone.min.js" charset="utf-8"></script>
+  <!-- Our Synth Component -->
+  <script src="synth-component.js" charset="utf-8"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <!-- A-Frame scene -->
+  <a-scene antialias="true">
+    <!-- plain white background -->
+    <a-sky color="white"></a-sky>
+    <!-- our scene's camera -->
+    <a-camera position="0 0 4" user-height="0" wasd-controls="enabled: false">
+      <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
+      <a-cursor fuse="true"></a-cursor>
+    </a-camera>
+    <a-box
+      id="box1"
+      position="0 0 0"
+      synth="note: A4"
+      color="#212121"
+      segments-theta="64"
+      animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+      animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      ></a-box>
+
+      <!-- Ring 2 -->
+      <a-box 
+        position="1 0 0"
+        synth="note: E4" 
+        color="#FF0000" 
+        segments-theta="64"
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      </a-box>
+
+      <!-- Ring 3 -->
+      <a-box 
+        position="2 0 0"
+        synth="note: F3" 
+        color="#00FF00" 
+        segments-theta="64"
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      </a-box>
+
+      <!-- Ring 4 -->
+      <a-box  
+        position="3 0 0"
+        synth="note: G3"
+        color="#0000FF"
+        segments-theta="64
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      </a-box>
+</a-scene>
+    
+
+    <a-entity>
+  </a-scene>
+</body>
+
+</html>
+
