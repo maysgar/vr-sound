@@ -25,42 +25,73 @@
       <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
       <a-cursor fuse="true"></a-cursor>
     </a-camera>
+    <!-- Snyth box 1 -->
     <a-box
       id="box1"
-      position="0 0 0"
-      synth="note: A4"
-      color="#212121"
+      position="-3 0 0"
+      synth="note: C4"
+      color="#21618c"
       segments-theta="64"
       animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
       animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
-      <!-- Ring 2 -->
+      <!-- Synth box 2 -->
       <a-box 
-        position="1 0 0"
+        position="-2 0 0"
+        synth="note: D4" 
+        color="#2874a6" 
+        segments-theta="64"
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      ></a-box>
+
+      <!-- Synth box 3-->
+      <a-box 
+        position="-1 0 0"
         synth="note: E4" 
-        color="#FF0000" 
+        color="#2e86c1" 
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
-      <!-- Ring 3 -->
-      <a-box 
+      <!-- Synth box 4 -->
+      <a-box  
+        position="0 0 0"
+        synth="note: F4"
+        color="#3498db"
+        segments-theta="64"
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      ></a-box>
+
+      <!-- Synth box 5 -->
+      <a-box  
+        position="1 0 0"
+        synth="note: G4"
+        color="#5dade2"
+        segments-theta="64"
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+      ></a-box>
+
+      <!-- Synth box 6 -->
+      <a-box  
         position="2 0 0"
-        synth="note: F3" 
-        color="#00FF00" 
+        synth="note: A4"
+        color="#85c1e9"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
-      <!-- Ring 4 -->
+      <!-- Synth box 7 -->
       <a-box  
         position="3 0 0"
-        synth="note: G3"
-        color="#0000FF"
-        segments-theta="64
+        synth="note: B4"
+        color="#aed6f1"
+        segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
