@@ -43,7 +43,7 @@
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      </a-box>
+      ></a-box>
 
       <!-- Ring 3 -->
       <a-box 
@@ -53,7 +53,7 @@
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      </a-box>
+      ></a-box>
 
       <!-- Ring 4 -->
       <a-box  
@@ -63,7 +63,16 @@
         segments-theta="64
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      </a-box>
+      ></a-box>
+
+      <!-- drums -->
+      <a-assets>
+        <a-asset-item id="tree-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
+        <a-asset-item id="tree-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>
+      </a-assets>
+    
+      <a-entity position="-2 0 0" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+
 </a-scene>
     
 
