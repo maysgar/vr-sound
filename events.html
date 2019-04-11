@@ -106,12 +106,21 @@
       ></a-box>
 
       <!-- drums -->
-      <a-assets>
+      <!-- <a-assets>
         <a-asset-item id="tree-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
         <a-asset-item id="tree-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>
       </a-assets>
 
       <a-entity position="-2 0 0" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+
+    -->
+      
+      <!-- wc -->
+      <a-assets>
+        <a-asset-item id="wc-obj" src="./objects/toilet/Toilet.obj"></a-asset-item>
+      </a-assets>
+
+      <a-entity sound="src: url(flush.mp3); on: click" position="-6 0 0" obj-model="obj: #wc-obj" scale="0.02 0.02 0.02"></a-entity> -->
 
 </a-scene>
 
