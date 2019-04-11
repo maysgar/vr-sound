@@ -98,7 +98,7 @@
 
       <a-box
         position="4 0 0"
-        sound="src: url(canary.mp3); on: mousedown"
+        sound="src: url(canary.mp3); on: fusing"
         color="#aed6f1"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
@@ -111,7 +111,7 @@
         <a-asset-item id="tree-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>
       </a-assets>
 
-      <a-entity position="-2 0 0" obj-model="obj: #tree-obj; mtl: #tree-mtl" sound="src: url(drums.wav); on: mousedown; loop: true"></a-entity>
+      <a-entity cursor="fuse:true" position="-2 0 0" obj-model="obj: #tree-obj; mtl: #tree-mtl" sound="src: url(electropop.mp3); on: fusing; loop: true"></a-entity>
 
 </a-scene>
 
