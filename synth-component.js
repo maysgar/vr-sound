@@ -20,7 +20,6 @@ const synth = new Tone.Synth({
   }
 }).connect(filter) // connect the synth's output to the filter
 
-var player = new Tone.Player("canary.mp3").toMaster();
 // Our customer synth component
 AFRAME.registerComponent('synth', {
   // The schema defines arguments accepted by this component
