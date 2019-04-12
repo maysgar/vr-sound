@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <title>WebVR Musical Instrument</title>
   <!-- A-Frame CDN -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js" charset="utf-8"></script> -->
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
   <!-- Tone.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.10.0/Tone.min.js" charset="utf-8"></script>
   <!-- Our Synth Component -->
   <script src="synth-component.js" charset="utf-8"></script>
+  <!-- <script src="player-component.js"></script> -->
   <script src="sound-player.js"></script>
   <script src="main.js"></script>
 </head>
@@ -21,14 +21,57 @@
     <!-- plain white background -->
     <a-sky color="white"></a-sky>
     <!-- our scene's camera -->
-    <a-camera position="0 0 4" user-height="0" wasd-controls="enabled: false">
+    <a-camera position="0 0 2" user-height="0" wasd-controls="enabled: false">
       <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
       <a-cursor fuse="true"></a-cursor>
     </a-camera>
+
+    <!-- Room -->
+      <!-- Floor -->
+      <a-box id="floor"
+        position="0 -1 0"
+        geometry="height: 1; width: 10; depth: 10"
+        color="#FFA500"
+      ></a-box>
+
+      <!-- Walls -->
+      <a-box id="wall-front"
+        position="0 2 -5.5"
+        geometry="height: 6; width: 10; depth: 1"
+        color="#FFA500"
+        cursor="fuse: false">
+      </a-box>
+
+      <a-box id="wall-right"
+        position="5.5 2 0"
+        geometry="height: 6; width: 10; depth: 1"
+        rotation="0 90 0"
+        color="#FFA500"
+        cursor="fuse: false">
+      </a-box>
+
+      <a-box id="wall-back"
+        position="0 2 5.5"
+        geometry="height: 6; width: 10; depth: 1"
+        color="#FFA500"
+        cursor="fuse: false">
+      </a-box>
+
+      <a-box id="wall-left"
+        position="-5.5 2 0"
+        geometry="height: 6; width: 10; depth: 1"
+        rotation="0 90 0"
+        color="#FFA500"
+        cursor="fuse: false">
+      </a-box>
+
+
+    <!-- Synth Boxes -->
+
     <!-- Snyth box 1 -->
     <a-box
       id="box1"
-      position="-3 0 0"
+      position="-3 0 -4"
       synth="note: C4"
       color="#21618c"
       segments-theta="64"
@@ -38,7 +81,7 @@
 
       <!-- Synth box 2 -->
       <a-box
-        position="-2 0 0"
+        position="-2 0 -4"
         synth="note: D4"
         color="#2874a6"
         segments-theta="64"
@@ -48,7 +91,7 @@
 
       <!-- Synth box 3-->
       <a-box
-        position="-1 0 0"
+        position="-1 0 -4"
         synth="note: E4"
         color="#2e86c1"
         segments-theta="64"
@@ -58,7 +101,7 @@
 
       <!-- Synth box 4 -->
       <a-box
-        position="0 0 0"
+        position="0 0 -4"
         synth="note: F4"
         color="#3498db"
         segments-theta="64"
@@ -68,7 +111,7 @@
 
       <!-- Synth box 5 -->
       <a-box
-        position="1 0 0"
+        position="1 0 -4"
         synth="note: G4"
         color="#5dade2"
         segments-theta="64"
@@ -78,7 +121,7 @@
 
       <!-- Synth box 6 -->
       <a-box
-        position="2 0 0"
+        position="2 0 -4"
         synth="note: A4"
         color="#85c1e9"
         segments-theta="64"
@@ -88,7 +131,7 @@
 
       <!-- Synth box 7 -->
       <a-box
-        position="3 0 0"
+        position="3 0 -4"
         synth="note: B4"
         color="#aed6f1"
         segments-theta="64"
@@ -97,7 +140,7 @@
       ></a-box>
 
       <a-box
-        position="4 0 0"
+        position="4 0 -4"
         sound="src: url(canary.mp3); on: fusing"
         color="#aed6f1"
         segments-theta="64"
@@ -105,18 +148,38 @@
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
+      <a-box
+        audiohandler="audio_id: bird"
+        position="5 0 -4"
+        color="black"
+        segments-theta="64"
+        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;">
+        <audio id="bird" src="./canary.mp3" preload="auto"></audio>
+    </a-box>
+
       <!-- drums -->
       <a-assets>
-        <a-asset-item id="tree-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
-        <a-asset-item id="tree-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>
+        <a-asset-item id="drum-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
+        <a-asset-item id="drum-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>  
       </a-assets>
 
-      <a-entity cursor="fuse:true" position="-2 0 0" obj-model="obj: #tree-obj; mtl: #tree-mtl" sound="src: url(electropop.mp3); on: fusing; loop: true"></a-entity>
+      <!-- cursor fuse must be false or else the sound will play when the cursor is on any object. -->
+      <!-- <a-entity id="drum"
+      cursor="fuse:false" 
+      position="-2 0 0" 
+      obj-model="obj: #drum-obj; mtl: #drum-mtl" 
+      sound="src: url(electropop.mp3); startEvents: mousedown; on: fusing; loop: true"></a-entity> -->
 
-</a-scene>
+      <a-entity id=""
+        audiohandler="audio_id: drum"
+        position="-2 0 0" 
+        obj-model="obj: #drum-obj; mtl: #drum-mtl" 
+        sound
+        >
+        <audio id="drum" src="./electropop.mp3" loop="true" preload="auto"></audio>
+      </a-entity>
 
-
-    <a-entity>
   </a-scene>
 </body>
 
