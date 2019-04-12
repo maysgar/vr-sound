@@ -21,7 +21,7 @@ AFRAME.registerComponent('audiohandler', {
         audio_id: {type: "string", default: ""}
     },
     init: function() {
-       playing = false;
+       playing = true;
        audio = document.getElementById(this.data.audio_id);
        this.el.addEventListener('fusing', this.handlePlay.bind(this), false);
     },
