@@ -1,41 +1,49 @@
 
 console.log("In sound-player.js");
 
-var playing = false;
-var audio;
+class Sound {
+    constructor() {
+        this.audio = "";
+        this.playing = false;
+    }
+};
 
 // This promise(?) allows the user to play the sound by looking at object. 
 // Otherwise, an the .play() function returns the promise's rejection handler, so it doesn'y play. 
-async function playSound() {
+// the argument a is this.audio
+async function playSound(a) {
     try {
-        await audio.play();
-        audio.className = "playing";
+        await a.play();
+        a.className = "playing";
     }
     catch(err) {
-        audio.className = "";
+        a.className = "";
     }
 }
 
-AFRAME.registerComponent('audiohandler', {
+// This defines the audio-handler. It selects the first childNode of the audio-handler element. Any object that should play a sound
+// needs to have an <audio> tag as a child. 
+
+AFRAME.registerComponent('audio-handler', {
     schema : {
-        audio_id: {type: "string", default: ""}
+        // audio_id: {type: "string", default: ""}
     },
     init: function() {
-       playing = true;
-       audio = document.getElementById(this.data.audio_id);
-       this.el.addEventListener('fusing', this.handlePlay.bind(this), false);
+        this.playing = true;
+        this.audio = this.el.childNodes[1];
+        this.el.addEventListener('fusing', this.handlePlay.bind(this), false);
     },
     handlePlay: function() {
         console.log("fusing...");
         console.log('id: ' + this.data.audio_id);
-        console.log(audio);
-        if(!playing) {
-            playSound();
+        console.log(this.audio);
+        if(!this.playing) {
+            playSound(this.audio);
         } else {
-            audio.pause();
-            audio.currentTime = 0;
-            audio.className="";
+            this.audio.pause();
+            this.audio.currentTime = 0;
+            this.audio.className="";
         }
-         playing = !playing;
+        this.playing = !this.playing;
     }
 });

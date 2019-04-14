@@ -1,4 +1,4 @@
-// a FeedbackDelay effect, repeating every eighth note with 80% feedback
+// A FeedbackDelay effect, repeating every eighth note with 80% feedback
 const delay = new Tone.FeedbackDelay('8n', 0.8)
   // chained into a Volume set to -12dB then to the Master output
   .chain(new Tone.Volume(-12), Tone.Master)
@@ -8,7 +8,7 @@ const filter = new Tone.Filter(1500, 'lowpass')
   // the signal is sent to the Delay as well as Master
   .connect(delay).toMaster()
 
-// The synth
+// Synth 1
 const synth = new Tone.Synth({
   volume: -12, // the oscillator volume set to -12dB
   oscillator: {

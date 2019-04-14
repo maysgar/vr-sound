@@ -148,15 +148,15 @@
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
-      <a-box
-        audiohandler="audio_id: bird"
+      <a-box id="bird-block"
+        audio-handler
         position="5 0 -4"
         color="black"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;">
-        <audio id="bird" src="./canary.mp3" preload="auto"></audio>
-    </a-box>
+        <audio src="./canary.mp3" preload="auto"></audio>
+      </a-box>
 
       <!-- drums -->
       <a-assets>
@@ -164,20 +164,21 @@
         <a-asset-item id="drum-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>  
       </a-assets>
 
-      <!-- cursor fuse must be false or else the sound will play when the cursor is on any object. -->
-      <!-- <a-entity id="drum"
-      cursor="fuse:false" 
-      position="-2 0 0" 
-      obj-model="obj: #drum-obj; mtl: #drum-mtl" 
-      sound="src: url(electropop.mp3); startEvents: mousedown; on: fusing; loop: true"></a-entity> -->
+      <!-- Objects with sounds -->
+      <!-- All objects with sounds must have a child <audio> tag. this tag has a src, loop (default is false), and preload properties. -->
 
-      <a-entity id=""
-        audiohandler="audio_id: drum"
+      <a-entity id="drum"
+        audio-handler
         position="-2 0 0" 
-        obj-model="obj: #drum-obj; mtl: #drum-mtl" 
-        sound
-        >
-        <audio id="drum" src="./electropop.mp3" loop="true" preload="auto"></audio>
+        obj-model="obj: #drum-obj; mtl: #drum-mtl">
+        <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
+      </a-entity>
+
+      <a-entity id="drumtest"
+        audio-handler
+        position="2 0 0" 
+        obj-model="obj: #drum-obj; mtl: #drum-mtl">
+        <audio src="./canary.mp3" preload="auto"></audio>
       </a-entity>
 
   </a-scene>
