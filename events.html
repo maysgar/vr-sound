@@ -10,6 +10,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.10.0/Tone.min.js" charset="utf-8"></script>
   <!-- Our Synth Component -->
   <script src="synth-component.js" charset="utf-8"></script>
+  <script src="synth2-component.js" charset="utf-8"></script>
+  <script src="synth3-component.js" charset="utf-8"></script>
+  <script src="synth4-component.js" charset="utf-8"></script>
   <!-- <script src="player-component.js"></script> -->
   <script src="sound-player.js"></script>
   <script src="main.js"></script>
@@ -21,7 +24,7 @@
     <!-- plain white background -->
     <a-sky color="white"></a-sky>
     <!-- our scene's camera -->
-    <a-camera position="0 0 2" user-height="0" wasd-controls="enabled: false">
+    <a-camera position="0 2.25 2" user-height="0" wasd-controls="enabled: false">
       <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
       <a-cursor fuse="true"></a-cursor>
     </a-camera>
@@ -67,77 +70,281 @@
 
 
     <!-- Synth Boxes -->
-
-    <!-- Snyth box 1 -->
-    <a-box
-      id="box1"
-      position="-3 0 -4"
-      synth="note: C4"
-      color="#21618c"
-      segments-theta="64"
-      animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-      animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
-
-      <!-- Synth box 2 -->
+    <!-- SYNTH 1 ==== in C major ==== -->
+    <a-entity id="synth1" position="0 4.5 -4">
+      <!-- Snyth box 1 -->
       <a-box
-        position="-2 0 -4"
-        synth="note: D4"
-        color="#2874a6"
+        id="box1"
+        position="-3 0 0"
+        synth="note: C4"
+        color="#21618c"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
+        ></a-box>
 
-      <!-- Synth box 3-->
-      <a-box
-        position="-1 0 -4"
-        synth="note: E4"
-        color="#2e86c1"
+        <!-- Synth box 2 -->
+        <a-box
+          position="-2 0 0"
+          synth="note: D4"
+          color="#2874a6"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
+
+        <!-- Synth box 3-->
+        <a-box
+          position="-1 0 0"
+          synth="note: E4"
+          color="#2e86c1"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
+
+        <!-- Synth box 4 -->
+        <a-box
+          position="0 0 0"
+          synth="note: F4"
+          color="#3498db"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
+
+        <!-- Synth box 5 -->
+        <a-box
+          position="1 0 0"
+          synth="note: G4"
+          color="#5dade2"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
+
+        <!-- Synth box 6 -->
+        <a-box
+          position="2 0 0"
+          synth="note: A4"
+          color="#85c1e9"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
+
+        <!-- Synth box 7 -->
+        <a-box
+          position="3 0 0"
+          synth="note: B4"
+          color="#aed6f1"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
+      </a-entity>
+
+      <!-- SYNTH 2 ==== in F major ==== -->
+      <a-entity id="synth2" position=" 0 3 -4">
+
+        <!-- Snyth2 box 1 -->
+        <a-box
+        id="box1"
+        position="-3 0 0"
+        synth2="note: C4"
+        color="#abebc6"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
+        ></a-box>
 
-      <!-- Synth box 4 -->
-      <a-box
-        position="0 0 -4"
-        synth="note: F4"
-        color="#3498db"
+        <!-- Synth2 box 2 -->
+        <a-box
+          position="-2 0 0"
+          synth2="note: D4"
+          color="#82e0aa"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth2 box 3-->
+        <a-box
+          position="-1 0 0"
+          synth2="note: E4"
+          color="#58d68d"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth2 box 4 -->
+        <a-box
+          position="0 0 0"
+          synth2="note: F4"
+          color="#2ecc71"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth2 box 5 -->
+        <a-box
+          position="1 0 0"
+          synth2="note: G4"
+          color="#28b463"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth2 box 6 -->
+        <a-box
+          position="2 0 0"
+          synth2="note: A4"
+          color="#239b56"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth2 box 7 -->
+        <a-box
+          position="3 0 0"
+          synth2="note: B4"
+          color="#1d8348"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+    </a-entity>
+
+      <!-- SYNTH 3 ==== in C minor ================================================================ -->
+      <a-entity id="synth3" position="0 1.5 -4">
+        <!-- Snyth3 box 1 -->
+        <a-box
+        id="box1"
+        position="-3 0 0"
+        synth3="note: C4"
+        color="#b03a2e"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
+        ></a-box>
 
-      <!-- Synth box 5 -->
-      <a-box
-        position="1 0 -4"
-        synth="note: G4"
-        color="#5dade2"
-        segments-theta="64"
-        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
+        <!-- Synth3 box 2 -->
+        <a-box
+          position="-2 0 0"
+          synth3="note: D4"
+          color="#cb4335"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
 
-      <!-- Synth box 6 -->
-      <a-box
-        position="2 0 -4"
-        synth="note: A4"
-        color="#85c1e9"
-        segments-theta="64"
-        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
+        <!-- Synth3 box 3-->
+        <a-box
+          position="-1 0 0"
+          synth3="note: E4"
+          color="#e74c3c"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
 
-      <!-- Synth box 7 -->
-      <a-box
-        position="3 0 -4"
-        synth="note: B4"
-        color="#aed6f1"
-        segments-theta="64"
-        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
-      ></a-box>
+        <!-- Synth3 box 4 -->
+        <a-box
+          position="0 0 0"
+          synth3="note: F4"
+          color="#ec7063"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth3 box 5 -->
+        <a-box
+          position="1 0 0"
+          synth3="note: G4"
+          color="#f1948a"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth3 box 6 -->
+        <a-box
+          position="2 0 0"
+          synth3="note: A4"
+          color="#f5b7b1"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth3 box 7 -->
+        <a-box
+          position="3 0 0"
+          synth3="note: B4"
+          color="#fadbd8"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+      </a-entity>
+
+      <!-- SYNTH 4 ==== in C minor ================================================================ -->
+      <a-entity id="synth3" position="0 0 -4">
+          <!-- Snyth4 box 1 -->
+          <a-box
+          id="box1"
+          position="-3 0 0"
+          synth4="note: C4"
+          color="#ebdef0"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+  
+          <!-- Synth4 box 2 -->
+          <a-box
+            position="-2 0 0"
+            synth4="note: D4"
+            color="#d7bde2"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+  
+          <!-- Synth4 box 3-->
+          <a-box
+            position="-1 0 0"
+            synth4="note: E4"
+            color="#c39bd3"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+  
+          <!-- Synth4 box 4 -->
+          <a-box
+            position="0 0 0"
+            synth4="note: F4"
+            color="#9b59b6"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+  
+          <!-- Synth4 box 5 -->
+          <a-box
+            position="1 0 0"
+            synth4="note: G4"
+            color="#884ea0"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+  
+          <!-- Synth4 box 6 -->
+          <a-box
+            position="2 0 0"
+            synth4="note: A4"
+            color="#76448a"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+  
+          <!-- Synth4 box 7 -->
+          <a-box
+            position="3 0 0"
+            synth4="note: B4"
+            color="#633974"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
+        </a-entity>
 
       <a-box
         position="4 0 -4"
@@ -148,16 +355,6 @@
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
-      <a-box id="bird-block"
-        audio-handler
-        position="5 0 -4"
-        color="black"
-        segments-theta="64"
-        animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;">
-        <audio src="./canary.mp3" preload="auto"></audio>
-      </a-box>
-
       <!-- drums -->
       <a-assets>
         <a-asset-item id="drum-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
@@ -165,7 +362,7 @@
       </a-assets>
 
       <!-- Objects with sounds -->
-      <!-- All objects with sounds must have a child <audio> tag. this tag has a src, loop (default is false), and preload properties. -->
+      <!-- All objects with mtls and sounds must have a child <audio> tag. this tag has a src, loop (default is false), and preload properties. -->
 
       <a-entity id="drum"
         audio-handler

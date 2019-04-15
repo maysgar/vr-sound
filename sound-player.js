@@ -1,13 +1,6 @@
 
 console.log("In sound-player.js");
 
-class Sound {
-    constructor() {
-        this.audio = "";
-        this.playing = false;
-    }
-};
-
 // This promise(?) allows the user to play the sound by looking at object. 
 // Otherwise, an the .play() function returns the promise's rejection handler, so it doesn'y play. 
 // the argument a is this.audio
@@ -34,9 +27,9 @@ AFRAME.registerComponent('audio-handler', {
         this.el.addEventListener('fusing', this.handlePlay.bind(this), false);
     },
     handlePlay: function() {
-        console.log("fusing...");
-        console.log('id: ' + this.data.audio_id);
-        console.log(this.audio);
+        // console.log("fusing...");
+        // console.log('id: ' + this.data.audio_id);
+        // console.log(this.audio);
         if(!this.playing) {
             playSound(this.audio);
         } else {
