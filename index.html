@@ -33,7 +33,7 @@
       <!-- Floor -->
       <a-box id="floor"
         position="0 -1 0"
-        geometry="height: 1; width: 10; depth: 10"
+        geometry="height: 1; width: 15; depth: 10"
         color="#FFA500"
       ></a-box>
 
@@ -46,7 +46,7 @@
       </a-box>
 
       <a-box id="wall-right"
-        position="5.5 2 0"
+        position="8 2 0"
         geometry="height: 6; width: 10; depth: 1"
         rotation="0 90 0"
         color="#FFA500"
@@ -61,7 +61,7 @@
       </a-box>
 
       <a-box id="wall-left"
-        position="-5.5 2 0"
+        position="-8 2 0"
         geometry="height: 6; width: 10; depth: 1"
         rotation="0 90 0"
         color="#FFA500"
@@ -376,6 +376,19 @@
         position="2 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./canary.mp3" preload="auto"></audio>
+      </a-entity>
+
+      <!-- Plants -->
+      <a-assets>
+        <a-asset-item id="plant-obj" src="./objects/plant/eb_house_plant_03.obj"></a-asset-item>
+        <a-asset-item id="plant-mtl" src="./objects/plant/eb_house_plant_03.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity id="plant"
+        audio-handler
+        position="1 1 0"
+        obj-model="obj: #plant-obj; mtl: #plant-mtl">
+        <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
       </a-entity>
 
   </a-scene>

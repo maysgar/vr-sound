@@ -1,8 +1,8 @@
 
 console.log("In sound-player.js");
 
-// This promise(?) allows the user to play the sound by looking at object. 
-// Otherwise, an the .play() function returns the promise's rejection handler, so it doesn'y play. 
+// This promise(?) allows the user to play the sound by looking at object.
+// Otherwise, an the .play() function returns the promise's rejection handler, so it doesn'y play.
 // the argument a is this.audio
 async function playSound(a) {
     try {
@@ -15,7 +15,7 @@ async function playSound(a) {
 }
 
 // This defines the audio-handler. It selects the first childNode of the audio-handler element. Any object that should play a sound
-// needs to have an <audio> tag as a child. 
+// needs to have an <audio> tag as a child.
 
 AFRAME.registerComponent('audio-handler', {
     schema : {
