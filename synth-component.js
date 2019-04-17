@@ -38,14 +38,16 @@ AFRAME.registerComponent('synth', {
   init: function() {
     // setup the fusing/hover event listener
     // this.el refers to the entity
-    console.log('init synth');
+    console.log('init synth 1');
     this.el.addEventListener('fusing', this.trigger.bind(this))
-    this.el.addEventListener('mousedown', this.test.bind(this))
   },
   trigger: function() {
     // trigger a note on the synth
     // this.data refers to the arguments defined
-    synth.triggerAttackRelease(this.data.note, this.data.duration)
+    if (Tone.context.state !== 'running') {
+      Tone.context.resume();
+    }
+    synth.triggerAttackRelease(this.data.note, this.data.duration);
   },
   test: function() {
     console.log("yeet");

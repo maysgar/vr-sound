@@ -45,8 +45,12 @@ AFRAME.registerComponent('synth2', {
   trigger: function() {
     // trigger a note on the synth
     // this.data refers to the arguments defined
-    console.log("Playing synth 2 note : " + this.data.note);
-    synth2.triggerAttackRelease(this.data.note, this.data.duration)
+    //console.log("Playing synth 2 note : " + this.data.note);
+
+    if (Tone.context.state !== 'running') {
+      Tone.context.resume();
+    }
+    synth2.triggerAttackRelease(this.data.note, this.data.duration);
   },
   test: function() {
    // console.log("yeet");
