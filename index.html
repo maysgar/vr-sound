@@ -372,17 +372,40 @@
         <audio src="./canary.mp3" preload="auto"></audio>
       </a-entity>
 
-      <!-- Plants -->
+      <!-- Plantpot -->
       <a-assets>
-        <a-asset-item id="plant-obj" src="./objects/plant/eb_house_plant_03.obj"></a-asset-item>
-        <a-asset-item id="plant-mtl" src="./objects/plant/eb_house_plant_03.mtl"></a-asset-item>
+        <a-asset-item id="plantpot-obj" src="./objects/plantpot/flower.obj"></a-asset-item>
+        <a-asset-item id="plantpot-mtl" src="./objects/plantpot/flower.mtl"></a-asset-item>
       </a-assets>
 
-      <a-entity id="plant"
+      <a-entity id="plantpot"
         audio-handler
-        position="-2 2 0"
-        obj-model="obj: #plant-obj; mtl: #plant-mtl" scale="0.01 0.01 0.01">
-        <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
+        position="-7 0 -4.5"
+        obj-model="obj: #plantpot-obj; mtl: #plantpot-mtl" scale="0.02 0.02 0.02">
+      </a-entity>
+
+      <a-entity id="plantpot"
+        audio-handler
+        position="7 0 -4.5"
+        obj-model="obj: #plantpot-obj; mtl: #plantpot-mtl" scale="0.02 0.02 0.02">
+      </a-entity>
+
+      <!-- Plantpot2 -->
+      <a-assets>
+        <a-asset-item id="plantpot2-obj" src="./objects/plantpot2/D_Plant.obj"></a-asset-item>
+        <a-asset-item id="plantpot2-mtl" src="./objects/plantpot2/D_Plant.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity id="plantpot2"
+        audio-handler
+        position="-6.5 0 4"
+        obj-model="obj: #plantpot2-obj; mtl: #plantpot2-mtl" scale="0.01 0.01 0.01" rotation="270 0 0">
+      </a-entity>
+
+      <a-entity id="plantpot2"
+        audio-handler
+        position="6.5 0 4"
+        obj-model="obj: #plantpot2-obj; mtl: #plantpot2-mtl" scale="0.01 0.01 0.01" rotation="270 0 0">
       </a-entity>
 
   </a-scene>
