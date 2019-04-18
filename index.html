@@ -493,8 +493,20 @@
       <a-entity id="plantpot2"
         audio-handler
         position="6.5 0 4"
-        obj-model="obj: #plantpot2-obj; mtl: #plantpot2-mtl" scale="0.01 0.01 0.01" rotation="270 0 0">
+        obj-model="obj: #plantpot2-obj; mtl: #plantpot2-mtl" scale="0.015 0.015 0.015" rotation="270 0 0">
       </a-entity>
+
+      <a-entity id="flower_base"
+        audio-handler
+        position="-3.715 0.9 2.458"
+        obj-model="obj: #flower_base-obj; mtl: #flower_base-mtl" scale="0.015 0.015 0.015">
+      </a-entity>
+
+      <!-- Flower base -->
+      <a-assets>
+        <a-asset-item id="flower_base-obj" src="./objects/flower_base/Flower vase.obj"></a-asset-item>
+        <a-asset-item id="flower_base-mtl" src="./objects/flower_base/Flower vase.mtl"></a-asset-item>
+      </a-assets>
 
       <!-- Chair -->
       <a-entity id="chair"
@@ -503,13 +515,34 @@
       obj-model="obj: #chair-obj; mtl: #chair-mtl" scale="0.02 0.02 0.02">
         <audio src="chair.wav" preload="auto"></audio>
       </a-entity>
+      <!-- Stuff on table -->
+      <a-entity id="tableStuff" position="2 0 -0.8">
 
-      <!-- Bird -->
-      <a-entity id="bird"
+        <!-- Table -->
+        <a-entity id="table"
         audio-handler
-        position=" 3 0 3"
-        obj-model="obj: #bird-obj; mtl: #bird-mtl" scale="0.1 0.1 0.1">
-        <audio src="canary.mp3" preload="auto"></audio>
+        position="-5.743 0 3.279"
+        obj-model="obj: #table-obj; mtl: #table-mtl" scale=".7 .7 .7">
+        <audio src="./table.wav" loop="false" preload="auto"></audio>
+        </a-entity>
+
+        <!-- Chairs -->
+        <a-entity id="chair1" audio-handler="" position="-6.66722 0 3.55032" rotation="0 87.033 0" obj-model="obj: ./objects/chair/chair.obj; mtl: ./objects/chair/chair.mtl" scale="0.02 0.02 0.02">
+          <audio src="chair.wav" preload="auto"></audio>
+        </a-entity>
+
+        <a-entity id="chair2" audio-handler="" position="-6.07987 0 2.56181" rotation="0 10 0" obj-model="obj: ./objects/chair/chair.obj; mtl: ./objects/chair/chair.mtl" scale="0.02 0.02 0.02">
+          <audio src="chair.wav" preload="auto"></audio>
+        </a-entity>
+
+        <a-entity id="chair3" audio-handler="" position="-5.80649 0 4.06765" rotation=" 0 161.465 0" obj-model="obj: ./objects/chair/chair.obj; mtl: ./objects/chair/chair.mtl" scale="0.02 0.02 0.02">
+          <audio src="chair.wav" preload="auto"></audio>
+        </a-entity>
+
+        <!-- Bird -->
+        <a-entity id="bird" audio-handler="" position="-5.44841 0.88469 3.42092" rotation="0 113.809 0" obj-model="obj: ./objects/bird/raven.obj; mtl: ./objects/bird/raven.mtl" scale="0.1 0.1 0.1">
+          <audio src="canary.mp3" preload="auto"></audio>
+        </a-entity>
       </a-entity>
 
       <!-- Plants -->
@@ -518,14 +551,7 @@
         <a-asset-item id="table-mtl" src="./objects/wooden-coffe-table-obj/wooden-coffe-table.mtl"></a-asset-item>
       </a-assets>
 
-      <a-entity id="table"
-        audio-handler
-
-        position="-4 0 4"
-        obj-model="obj: #table-obj; mtl: #table-mtl" scale=".7 .7 .7">
-        <audio src="./table.wav" loop="false" preload="auto"></audio>
-      </a-entity>
-
+      
   </a-scene>
 </body>
 
