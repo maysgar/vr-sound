@@ -383,15 +383,15 @@
 
       <!-- Plants -->
       <a-assets>
-        <a-asset-item id="plant-obj" src="./objects/plant/eb_house_plant_03.obj"></a-asset-item>
-        <a-asset-item id="plant-mtl" src="./objects/plant/eb_house_plant_03.mtl"></a-asset-item>
+        <a-asset-item id="table-obj" src="./objects/wooden-coffe-table-obj/wooden-coffe-table.obj"></a-asset-item>
+        <a-asset-item id="table-mtl" src="./objects/wooden-coffe-table-obj/wooden-coffe-table.mtl"></a-asset-item>
       </a-assets>
 
-      <a-entity id="plant"
+      <a-entity id="table"
         audio-handler
-        position="-2 2 0"
-        obj-model="obj: #plant-obj; mtl: #plant-mtl" scale="0.01 0.01 0.01">
-        <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
+        position="-4 0 4"
+        obj-model="obj: #table-obj; mtl: #table-mtl" scale=".7 .7 .7">
+        <audio src="./table.wav" loop="false" preload="auto"></audio>
       </a-entity>
 
   </a-scene>
