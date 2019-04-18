@@ -30,7 +30,7 @@ AFRAME.registerComponent('audio-handler', {
         // console.log("fusing...");
         // console.log('id: ' + this.data.audio_id);
         // console.log(this.audio);
-        this.playing = false;
+        //this.playing = false;
         if(!this.playing) {
             playSound(this.audio);
         } else {
