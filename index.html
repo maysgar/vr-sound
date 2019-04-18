@@ -22,9 +22,12 @@
   <!-- A-Frame scene -->
   <a-scene antialias="true">
     <!-- plain white background -->
-    <a-sky color="white"></a-sky>
+    <a-assets>
+      <img id="sky" src="img/bluesky.jpg">
+    </a-assets>
+    <a-sky src="#sky"></a-sky>
     <!-- our scene's camera -->
-    <a-camera position="0 2.25 2" user-height="0" wasd-controls="enabled: false">
+    <a-camera position="0 2 3" user-height="0" wasd-controls="enabled: false">
       <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
       <a-cursor fuse="true"></a-cursor>
     </a-camera>
@@ -34,13 +37,13 @@
       <a-box id="floor"
         position="0 -1 0"
         geometry="height: 1; width: 15; depth: 10"
-        color="#FFA500"
+        src="img/floor.jpg"
       ></a-box>
 
       <!-- Walls -->
       <a-box id="wall-front"
         position="0 2 -5.5"
-        geometry="height: 6; width: 10; depth: 1"
+        geometry="height: 6; width: 15; depth: 1"
         color="#FFA500"
         cursor="fuse: false">
       </a-box>
@@ -55,7 +58,7 @@
 
       <a-box id="wall-back"
         position="0 2 5.5"
-        geometry="height: 6; width: 10; depth: 1"
+        geometry="height: 6; width: 15; depth: 1"
         color="#FFA500"
         cursor="fuse: false">
       </a-box>
@@ -366,14 +369,14 @@
 
       <a-entity id="drum"
         audio-handler
-        position="-2 0 0"
+        position="-2.5 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
       </a-entity>
 
       <a-entity id="drumtest"
         audio-handler
-        position="2 0 0"
+        position="2.5 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./canary.mp3" preload="auto"></audio>
       </a-entity>
@@ -386,8 +389,8 @@
 
       <a-entity id="plant"
         audio-handler
-        position="1 1 1"
-        obj-model="obj: #plant-obj; mtl: #plant-mtl">
+        position="-2 2 0"
+        obj-model="obj: #plant-obj; mtl: #plant-mtl" scale="0.01 0.01 0.01">
         <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
       </a-entity>
 
