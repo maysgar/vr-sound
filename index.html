@@ -485,8 +485,20 @@
       <a-entity id="plantpot2"
         audio-handler
         position="6.5 0 4"
-        obj-model="obj: #plantpot2-obj; mtl: #plantpot2-mtl" scale="0.01 0.01 0.01" rotation="270 0 0">
+        obj-model="obj: #plantpot2-obj; mtl: #plantpot2-mtl" scale="0.015 0.015 0.015" rotation="270 0 0">
       </a-entity>
+
+      <a-entity id="flower_base"
+        audio-handler
+        position="-4 0.9 4"
+        obj-model="obj: #flower_base-obj; mtl: #flower_base-mtl" scale="0.02 0.02 0.02">
+      </a-entity>
+
+      <!-- Flower base -->
+      <a-assets>
+        <a-asset-item id="flower_base-obj" src="./objects/flower_base/Flower vase.obj"></a-asset-item>
+        <a-asset-item id="flower_base-mtl" src="./objects/flower_base/Flower vase.mtl"></a-asset-item>
+      </a-assets>
 
       <!-- Chair -->
       <a-entity id="chair"
