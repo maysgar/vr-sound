@@ -27,7 +27,7 @@
     </a-assets>
     <a-sky src="#sky"></a-sky>
     <!-- our scene's camera -->
-    <a-camera position="0 2 3" user-height="0" wasd-controls="enabled: false">
+    <a-camera position=".5 2 3" user-height="0" wasd-controls="enabled: false">
       <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
       <a-cursor fuse="true"></a-cursor>
     </a-camera>
@@ -145,6 +145,16 @@
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
           animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
+
+        <!-- Synth box 8 -->
+        <a-box
+          position="4 0 0"
+          synth="note: C5"
+          color="#D2EBFF"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
       </a-entity>
 
       <!-- SYNTH 2 ==== in F major ==== -->
@@ -213,6 +223,15 @@
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         ></a-box>
+        <!-- Synth2 box 8 -->
+        <a-box
+          position="4 0 0"
+          synth2="note: C5"
+          color="#135830"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
     </a-entity>
 
       <!-- SYNTH 3 ==== in C minor ================================================================ -->
@@ -277,6 +296,15 @@
           position="3 0 0"
           synth3="note: B4"
           color="#fadbd8"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth3 box 7 -->
+        <a-box
+          position="4 0 0"
+          synth3="note: C5"
+          color="#FFFAFA"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         ></a-box>
@@ -347,6 +375,15 @@
             segments-theta="64"
             animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
           ></a-box>
+
+           <!-- Synth4 box 7 -->
+          <a-box
+            position="4 0 0"
+            synth4="note: C5"
+            color="#4A2559"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
         </a-entity>
 
       <!-- drums -->
@@ -367,7 +404,7 @@
 
       <a-entity id="drumtest"
         audio-handler
-        position="2.5 0 0"
+        position="3.5 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./canary.mp3" preload="auto"></audio>
       </a-entity>
