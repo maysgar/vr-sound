@@ -353,6 +353,10 @@
       <a-assets>
         <a-asset-item id="drum-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
         <a-asset-item id="drum-mtl" src="./objects/drum/conga-hand-drum.mtl"></a-asset-item>
+        <a-asset-item id="chair-obj" src="./objects/chair/chair.obj"></a-asset-item>
+        <a-asset-item id="chair-mtl" src="./objects/chair/chair.mtl"></a-asset-item>
+        <a-asset-item id="bird-obj" src="./objects/bird/raven.obj"></a-asset-item>
+        <a-asset-item id="bird-mtl" src="./objects/bird/raven.mtl"></a-asset-item>
       </a-assets>
 
       <!-- Objects with sounds -->
@@ -370,6 +374,22 @@
         position="2.5 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./canary.mp3" preload="auto"></audio>
+      </a-entity>
+
+      <!-- Chair -->
+      <a-entity id="chair"
+      audio-handler
+      position=" 3 0 3"
+      obj-model="obj: #chair-obj; mtl: #chair-mtl" scale="0.02 0.02 0.02">
+        <audio src="chair.wav" preload="auto"></audio>
+      </a-entity>
+
+      <!-- Bird -->
+      <a-entity id="bird"
+        audio-handler
+        position=" 3 0 3"
+        obj-model="obj: #bird-obj; mtl: #bird-mtl" scale="0.1 0.1 0.1">
+        <audio src="canary.mp3" preload="auto"></audio>
       </a-entity>
 
       <!-- Plants -->
