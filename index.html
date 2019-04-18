@@ -22,12 +22,9 @@
   <!-- A-Frame scene -->
   <a-scene antialias="true">
     <!-- plain white background -->
-    <a-assets>
-      <img id="sky" src="img/bluesky.jpg">
-    </a-assets>
-    <a-sky src="#sky"></a-sky>
+    <a-sky color="white"></a-sky>
     <!-- our scene's camera -->
-    <a-camera position="0 2 3" user-height="0" wasd-controls="enabled: false">
+    <a-camera position="0 2.25 2" user-height="0" wasd-controls="enabled: false">
       <!-- cursor with fuse enabled, allowing us to detect when it hovers over an entity -->
       <a-cursor fuse="true"></a-cursor>
     </a-camera>
@@ -37,13 +34,13 @@
       <a-box id="floor"
         position="0 -1 0"
         geometry="height: 1; width: 15; depth: 10"
-        src="img/floor.jpg"
+        color="#FFA500"
       ></a-box>
 
       <!-- Walls -->
       <a-box id="wall-front"
         position="0 2 -5.5"
-        geometry="height: 6; width: 15; depth: 1"
+        geometry="height: 6; width: 10; depth: 1"
         color="#FFA500"
         cursor="fuse: false">
       </a-box>
@@ -58,7 +55,7 @@
 
       <a-box id="wall-back"
         position="0 2 5.5"
-        geometry="height: 6; width: 15; depth: 1"
+        geometry="height: 6; width: 10; depth: 1"
         color="#FFA500"
         cursor="fuse: false">
       </a-box>
@@ -145,6 +142,16 @@
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
           animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
+
+        <!-- Synth box 8 -->
+        <a-box
+          position="4 0 0"
+          synth="note: C5"
+          color="#D2EBFF"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
+        ></a-box>
       </a-entity>
 
       <!-- SYNTH 2 ==== in F major ==== -->
@@ -210,6 +217,15 @@
           position="3 0 0"
           synth2="note: B4"
           color="#1d8348"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
+
+        <!-- Synth2 box 8 -->
+        <a-box
+          position="4 0 0"
+          synth2="note: C5"
+          color="#135830"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         ></a-box>
@@ -280,6 +296,15 @@
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
         ></a-box>
+
+        <!-- Synth3 box 8 -->
+        <a-box
+          position="4 0 0"
+          synth3="note: C5"
+          color="#FFFAFA"
+          segments-theta="64"
+          animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+        ></a-box>
       </a-entity>
 
       <!-- SYNTH 4 ==== in C minor ================================================================ -->
@@ -347,6 +372,15 @@
             segments-theta="64"
             animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
           ></a-box>
+
+           <!-- Synth4 box 8 -->
+          <a-box
+            position="4 0 0"
+            synth4="note: C5"
+            color="#4A2559"
+            segments-theta="64"
+            animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
+          ></a-box>
         </a-entity>
 
       <a-box
@@ -358,6 +392,39 @@
         animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
       ></a-box>
 
+      <!-- Album Covers -->
+      <a-box
+      width=".75"
+      height=".75"
+      depth="0.01"
+      position="3 1.7 1"
+      src="pinkAlbum.jpg"
+      rotation="0 90 0"
+      ></a-box>
+      <a-box
+      width=".75"
+      height=".75"
+      depth="0.01"
+      position="3 1.7 2"
+      src="jonasAlbum.jpg"
+      rotation="0 90 0"
+      ></a-box>
+      <a-box
+      width=".75"
+      height=".75"
+      depth="0.01"
+      position="3 2.7 2"
+      src="jonasAlbum.jpg"
+      rotation="0 90 0"
+      ></a-box>
+      <a-box
+      width=".75"
+      height=".75"
+      depth="0.01"
+      position="3 2.7 1"
+      src="jonasAlbum.jpg"
+      rotation="0 90 0"
+      ></a-box>
       <!-- drums -->
       <a-assets>
         <a-asset-item id="drum-obj" src="./objects/drum/conga-hand-drum.obj"></a-asset-item>
@@ -369,14 +436,14 @@
 
       <a-entity id="drum"
         audio-handler
-        position="-2.5 0 0"
+        position="-2 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
       </a-entity>
 
       <a-entity id="drumtest"
         audio-handler
-        position="2.5 0 0"
+        position="2 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./canary.mp3" preload="auto"></audio>
       </a-entity>
@@ -389,9 +456,15 @@
 
       <a-entity id="table"
         audio-handler
+<<<<<<< HEAD
         position="-4 0 4"
         obj-model="obj: #table-obj; mtl: #table-mtl" scale=".7 .7 .7">
         <audio src="./table.wav" loop="false" preload="auto"></audio>
+=======
+        position="1 1 0"
+        obj-model="obj: #plant-obj; mtl: #plant-mtl">
+        <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
+>>>>>>> ae11bf5aaf00d1f494988c7d77b9bc213b0fb648
       </a-entity>
 
   </a-scene>
