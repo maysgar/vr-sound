@@ -38,7 +38,7 @@
       ></a-box>
 
       <!-- Walls -->
-      <!-- <a-box id="wall-front"
+      <a-box id="wall-front"
         position="0 2 -5.5"
         geometry="height: 6; width: 15; depth: 1"
         color="#FFA500"
@@ -70,7 +70,7 @@
         color="#d35400"
         cursor="fuse: false"
         src="img/walls.jpg">
-      </a-box> -->
+      </a-box>
 
 
     <!-- Synth Boxes -->
@@ -397,8 +397,9 @@
         width="1.5"
         height="1.5"
         depth="0.01"
-        position="6 1 2">
-        <audio src="./sounds/badRomance.mp3" preload="auto"></audio>
+        position="6 1 2"
+        volume="0.5">
+        <audio id="br" src="./sounds/badRomance.mp3" preload="auto"></audio>
       </a-box>
       <a-box
         audio-handler

@@ -1,7 +1,7 @@
 // A FeedbackDelay effect, repeating every eighth note with 80% feedback
 const delay4 = new Tone.FeedbackDelay('8n', 0.0)
   // chained into a Volume set to -12dB then to the Master output
-  .chain(new Tone.Volume(-12), Tone.Master)
+  .chain(new Tone.Volume(-10), Tone.Master)
 
 // a highpass Filter with a frequency of 1000 Hz
 const filter4 = new Tone.Filter(500, 'highpass')
