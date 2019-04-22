@@ -12,7 +12,7 @@ const filter4 = new Tone.Filter(500, 'highpass')
 const synth4 = new Tone.Synth({
   volume: -12, // the oscillator volume set to -12dB
   oscillator: {
-    type: 'square' // set the oscillator type
+    type: 'sine' // set the oscillator type
   },
   envelope: {
     attack: 0.02, // set the envelope attack
