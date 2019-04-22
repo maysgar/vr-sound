@@ -38,11 +38,12 @@
       ></a-box>
 
       <!-- Walls -->
-      <a-box id="wall-front"
+      <!-- <a-box id="wall-front"
         position="0 2 -5.5"
         geometry="height: 6; width: 15; depth: 1"
         color="#FFA500"
-        cursor="fuse: false">
+        cursor="fuse: false"
+        src="img/walls.jpg">
       </a-box>
 
       <a-box id="wall-right"
@@ -50,57 +51,57 @@
         geometry="height: 6; width: 10; depth: 1"
         rotation="0 90 0"
         color="#FFA500"
-        cursor="fuse: false">
+        cursor="fuse: false"
+        src="img/walls.jpg">
       </a-box>
 
       <a-box id="wall-back"
         position="0 2 5.5"
         geometry="height: 6; width: 15; depth: 1"
         color="#FFA500"
-        cursor="fuse: false">
+        cursor="fuse: false"
+        src="img/walls.jpg">
       </a-box>
 
       <a-box id="wall-left"
         position="-8 2 0"
         geometry="height: 6; width: 10; depth: 1"
         rotation="0 90 0"
-        color="#FFA500"
-        cursor="fuse: false">
-      </a-box>
+        color="#d35400"
+        cursor="fuse: false"
+        src="img/walls.jpg">
+      </a-box> -->
 
 
     <!-- Synth Boxes -->
     <!-- SYNTH 1 ==== in C major ==== -->
-    <a-entity id="synth1" position="0 4.5 -4">
+    <a-entity id="synth1" position="-0.5 4.5 -4">
       <!-- Snyth box 1 -->
       <a-box
         id="box1"
-        position="-3 0 0"
+        position="-3 0 2"
         synth="note: C4"
         color="#21618c"
         segments-theta="64"
         animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-        animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 2 -->
         <a-box
-          position="-2 0 0"
+          position="-2 0 1"
           synth="note: D4"
           color="#2874a6"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 3-->
         <a-box
-          position="-1 0 0"
+          position="-1 0 0.5"
           synth="note: E4"
           color="#2e86c1"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 4 -->
@@ -110,7 +111,6 @@
           color="#3498db"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 5 -->
@@ -120,37 +120,33 @@
           color="#5dade2"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 6 -->
         <a-box
-          position="2 0 0"
+          position="2 0 0.5"
           synth="note: A4"
           color="#85c1e9"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 7 -->
         <a-box
-          position="3 0 0"
+          position="3 0 1"
           synth="note: B4"
           color="#aed6f1"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
 
         <!-- Synth box 8 -->
         <a-box
-          position="4 0 0"
+          position="4 0 2"
           synth="note: C5"
           color="#D2EBFF"
           segments-theta="64"
           animation__op="property: opacity; startEvents:fusing; dur:500; from:0.5; to:1;"
-          animation__rot="property:rotation; startEvents:mousedown; dur:500; from: 0 0 0; to: 90 0 0;"
         ></a-box>
       </a-entity>
 
@@ -394,44 +390,44 @@
 
       <!-- Album Covers -->
       <a-box
-      audio-handler
-      width="1.5"
-      height="1.5"
-      depth="0.01"
-      position="6 1 0"
-      src="pinkAlbum.jpg"
-      rotation="0 90 0">
-      <audio src="./wishYouWereHere.mp3" preload="auto"></audio>
+        audio-handler
+        width="1.5"
+        height="1.5"
+        depth="0.01"
+        position="6 1 0"
+        src="pinkAlbum.jpg"
+        rotation="0 90 0">
+        <audio src="./wishYouWereHere.mp3" preload="auto"></audio>
       </a-box>
       <a-box
-      audio-handler
-      src="badRomance.png"
-      rotation="0 90 0"
-      width="1.5"
-      height="1.5"
-      depth="0.01"
-      position="6 1 2">
-      <audio src="./badRomance.mp3" preload="auto"></audio>
+        audio-handler
+        src="badRomance.png"
+        rotation="0 90 0"
+        width="1.5"
+        height="1.5"
+        depth="0.01"
+        position="6 1 2">
+        <audio src="./badRomance.mp3" preload="auto"></audio>
       </a-box>
       <a-box
-      audio-handler
-      width="1.5"
-      height="1.5"
-      depth="0.01"
-      position="6 2.7 0"
-      src="journey.jpg"
-      rotation="0 90 0">
-      <audio src="./journey.mp3" preload="auto"></audio>
+        audio-handler
+        width="1.5"
+        height="1.5"
+        depth="0.01"
+        position="6 2.7 0"
+        src="journey.jpg"
+        rotation="0 90 0">
+        <audio src="./journey.mp3" preload="auto"></audio>
       </a-box>
       <a-box
-      audio-handler
-      width="1.5"
-      height="1.5"
-      depth="0.01"
-      position="6 2.7 2"
-      src="rihanna.png"
-      rotation="0 90 0">
-      <audio src="./weFoundLove.mp3" preload="auto"></audio>
+        audio-handler
+        width="1.5"
+        height="1.5"
+        depth="0.01"
+        position="6 2.7 2"
+        src="rihanna.png"
+        rotation="0 90 0">
+        <audio src="./weFoundLove.mp3" preload="auto"></audio>
       </a-box>
       <!-- drums -->
       <a-assets>
@@ -448,16 +444,9 @@
 
       <a-entity id="drum"
         audio-handler
-        position="-2 0 0"
+        position="-3.5 0 0"
         obj-model="obj: #drum-obj; mtl: #drum-mtl">
         <audio src="./electropop.mp3" loop="true" preload="auto"></audio>
-      </a-entity>
-
-      <a-entity id="drumtest"
-        audio-handler
-        position="2 0 0"
-        obj-model="obj: #drum-obj; mtl: #drum-mtl">
-        <audio src="./canary.mp3" preload="auto"></audio>
       </a-entity>
 
       <!-- Plantpot -->
@@ -468,13 +457,13 @@
 
       <a-entity id="plantpot"
         audio-handler
-        position="-7 0 -4.5"
+        position="-7 -0.5 -4.5"
         obj-model="obj: #plantpot-obj; mtl: #plantpot-mtl" scale="0.02 0.02 0.02">
       </a-entity>
 
       <a-entity id="plantpot"
         audio-handler
-        position="7 0 -4.5"
+        position="7 -0.5 -4.5"
         obj-model="obj: #plantpot-obj; mtl: #plantpot-mtl" scale="0.02 0.02 0.02">
       </a-entity>
 
@@ -508,13 +497,6 @@
         <a-asset-item id="flower_base-mtl" src="./objects/flower_base/Flower vase.mtl"></a-asset-item>
       </a-assets>
 
-      <!-- Chair -->
-      <a-entity id="chair"
-      audio-handler
-      position=" 3 0 3"
-      obj-model="obj: #chair-obj; mtl: #chair-mtl" scale="0.02 0.02 0.02">
-        <audio src="chair.wav" preload="auto"></audio>
-      </a-entity>
       <!-- Stuff on table -->
       <a-entity id="tableStuff" position="2 0 -0.8">
 

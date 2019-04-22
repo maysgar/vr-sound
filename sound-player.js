@@ -22,7 +22,7 @@ AFRAME.registerComponent('audio-handler', {
         // audio_id: {type: "string", default: ""}
     },
     init: function() {
-        this.playing = true;
+        this.playing = false;
         this.audio = this.el.childNodes[1];
         this.el.addEventListener('fusing', this.handlePlay.bind(this), false);
     },
@@ -30,7 +30,6 @@ AFRAME.registerComponent('audio-handler', {
         // console.log("fusing...");
         // console.log('id: ' + this.data.audio_id);
         // console.log(this.audio);
-        //this.playing = false;
         if(!this.playing) {
             playSound(this.audio);
         } else {
