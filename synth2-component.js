@@ -9,8 +9,8 @@ const filter2 = new Tone.Filter(1000, 'lowpass')
   .connect(delay2).toMaster()
 
 // Synth 2
-const synth2 = new Tone.Synth({
-  volume: -12, // the oscillator volume set to -12dB
+const synth2 = new Tone.PolySynth({
+  volume: -5, // the oscillator volume set to -12dB
   oscillator: {
     type: 'square' // oscillator type to sin wave
   },
