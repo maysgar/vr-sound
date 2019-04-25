@@ -9,8 +9,8 @@ const filter4 = new Tone.Filter(500, 'highpass')
   .connect(delay4).toMaster()
 
 // Synth 2
-const synth4 = new Tone.Synth({
-  volume: -12, // the oscillator volume set to -12dB
+const synth4 = new Tone.AMSynth({
+  volume: -5, // the oscillator volume set to -12dB
   oscillator: {
     type: 'sine' // set the oscillator type
   },
